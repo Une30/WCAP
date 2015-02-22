@@ -1,0 +1,2 @@
+module DdtquestionsHelper
+end

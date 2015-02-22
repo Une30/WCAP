@@ -1,0 +1,11 @@
+<%q = Ddtquestion.find_by_id(params[:id])%>
+
+<%if q.question_type==1%>
+<h1>Would you rather have <%= q.value1 %> now or <%= q.value2 %> in <%= q.value3 %>?</h1>
+<%end%>
+
+
+<%if q.question_type==2%>
+<h1>Would you rather have <%= q.value1 %> for sure or <%= q.value2 %> with a <%= q.value3 %> chance?</h1>
+<%end%>
+<br>

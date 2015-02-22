@@ -1,0 +1,54 @@
+
+    <!DOCTYPE html>
+<html>
+<head>
+	<title>Go No/Go task</title>
+	<link href="mainStyle.css" type="text/css" rel="stylesheet" />
+	<link href="styleGONOGO.css" type="text/css" rel="stylesheet" />
+<style>
+body{
+    background-image: url('addiction.jpg') !important;
+}</style>
+</head>
+<body>
+<div id="wrapper">
+	
+	<div id="content">
+    <button id = "start" , onclick="start()"> شروع آزمون  </button>
+	<!--<div id="alaki" style="width:15pix ; height:15pix">alaki</div>-->
+        
+		<div id="BlueVert"> 
+		</div>
+        <div id="GreenVert">
+        </div>
+        <div id="WhiteVert">
+        </div>
+
+
+
+        <div id="BlueHori">
+        </div>
+        <div id="GreenHori">
+        </div>
+        <div id="WhiteHori">
+        </div>
+        <div id="WhitePlus">
+           <!-- <img class="plus" alt="Plus" src="plus.jpg" width="23" height="23" /> -->
+        </div>
+        <div id="WhiteWithNoBorder">
+        </div>
+
+
+<%= render :partial => '/rectangles/make_rectangle' , :locals =>{:gonogo => @gonogo}  %>        
+	</div>
+			<div id="exit">
+			<%= button_to "finish", gonogos_path, :class => "button", :id=>"finish", :method => :get%>
+        </div>
+</div>
+
+	</body>
+
+<script type="text/javascript" src="main.js"></script>
+</html>
+
+

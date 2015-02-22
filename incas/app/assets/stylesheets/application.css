@@ -1,0 +1,114 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@font-face {
+    font-family: 'BBCNassim';
+    src:url('fonts/BBCNassim.eot'),
+    url('fonts/BBCNassim.woff'),
+    url('fonts/BBCNassim.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IRKoodak';
+    src:url('fonts/IRKoodak.eot'),
+    url('fonts/IRKoodak.woff'),
+    url('fonts/IRKoodak.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Badr';
+    src:url('fonts/Badr.eot'),
+    url('fonts/Badr.woff'),
+    url('fonts/Badr.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BadrBold';
+    src:url('fonts/BadrBold.eot'),
+    url('fonts/BadrBold.woff'),
+    url('fonts/BadrBold.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Davat';
+    src:url('fonts/Davat.eot'),
+    url('fonts/Davat.woff'),
+    url('fonts/Davat.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ferdosi';
+    src:url('fonts/Ferdosi.eot'),
+    url('fonts/Ferdosi.woff'),
+    url('fonts/Ferdosi.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NazaninOutline';
+    src:url('fonts/NazaninOutline.eot'),
+    url('fonts/NazaninOutline.woff'),
+    url('fonts/NazaninOutline.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Tabassom';
+    src:url('fonts/Tabassom.eot'),
+    url('fonts/Tabassom.woff'),
+    url('fonts/Tabassom.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Yekan';
+    src:url('fonts/Yekan.eot'),
+    url('fonts/Yekan.woff'),
+    url('fonts/Yekan.ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('fonts/glyphicons-halflings-regular.eot');
+  src: url('fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('fonts/glyphicons-halflings-regular.woff') format('woff'), url('fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+
+body{
+  font-family: 'Yekan' !important ;
+}
+p , h1 , h2,h3,h4,h5,h6
+{
+ font-family: 'Yekan' !important ; 
+}
+button , input {
+ font-family: 'Yekan' !important ;  
+}
+#text_field{
+ font-family: 'Yekan' !important ;   
+}
+

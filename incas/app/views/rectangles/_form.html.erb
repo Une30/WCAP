@@ -1,0 +1,41 @@
+<%= form_for(@rectangle) do |f| %>
+  <% if @rectangle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rectangle.errors.count, "error") %> prohibited this rectangle from being saved:</h2>
+
+      <ul>
+      <% @rectangle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :gonogo_id %><br>
+    <%= f.number_field :gonogo_id %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.number_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :is_clicked %><br>
+    <%= f.number_field :is_clicked %>
+  </div>
+  <div class="field">
+    <%= f.label :display_time %><br>
+    <%= f.number_field :display_time %>
+  </div>
+  <div class="field">
+    <%= f.label :response_time %><br>
+    <%= f.number_field :response_time %>
+  </div>
+  <div class="field">
+    <%= f.label :reaction_time %><br>
+    <%= f.number_field :reaction_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+<%= form_for(@balloon) do |f| %>
+  <% if @balloon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@balloon.errors.count, "error") %> prohibited this balloon from being saved:</h2>
+
+      <ul>
+      <% @balloon.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bart_id %><br>
+    <%= f.number_field :bart_id %>
+  </div>
+  <div class="field">
+    <%= f.label :pumps %><br>
+    <%= f.number_field :pumps %>
+  </div>
+  <div class="field">
+    <%= f.label :explosion %><br>
+    <%= f.number_field :explosion %>
+  </div>
+  <div class="field">
+    <%= f.label :response_time %><br>
+    <%= f.number_field :response_time %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

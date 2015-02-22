@@ -1,0 +1,127 @@
+<%= render "layouts/navbar"%> 
+<div class="wrap">
+<h1>اطلاعات آزمودنی</h1>
+<hr><br>
+<p id="notice"><%= notice %></p>
+
+<div class="patient_text">
+  <strong>نام:</strong>
+  <%= @patient.first_name %>
+  <br><br><strong>نام خانوادگی:</strong>
+  <%= @patient.last_name %>
+  <br><br><strong>شماره‌ی پرونده:</strong>
+  <%= @patient.file_number %>
+  <br>
+  <br><br><strong>کد اختصاصی ۱۰ رقمی:</strong>
+  <%= @patient.private_code %>
+  <br>
+  <br><br><strong>جنسیت:</strong>
+  <%if @patient.gender%>
+  مرد
+  <%elsif @patient.gender == false%>
+  زن
+  <%end%>
+  <br>
+  <br><br><strong>تاریخ تولد:</strong>
+  <%= @patient.year_of_birth %>
+  <br>
+  <br><br><strong>تاریخ مصاحبه:</strong>
+  <%= @patient.interview_date %>
+  <br>
+  <br><br><strong>وضعیت تاهل:</strong>
+  <%= @patient.marital_status %>
+  <br>
+  <br><br><strong>میزان تحصیلات به سال:</strong>
+  <%= @patient.educational_year %>
+  <br><br><br><br>
+  <hr>
+  <strong>نیم‌رخ سومصرف مواد:</strong><br><br>
+  </div>
+  <div class="CSSTableGenerator" >
+<table>
+  
+    <tr>
+      <td>نوع ماده</td>
+      <td>اولین باری که از این ماده استفاده کرده‌ چند‌ساله بوده‌است؟(سن شروع)</td>
+      <td>مجموعا چند سال مصرف مداوم این ماده را داشته‌است؟(وابستگی)</td>
+      <td>روزهای استفاده(در ۳۰ روز گذشته)</td>
+      <td>کد روش غالب مصرف(در ۳۰ روز گذشته)</td>
+      <td>توضیحات</td>
+      <td colspan="2"></td>
+
+
+    </tr>
+
+    <% @patient.abusings.each do |a| %>
+      <tr>
+        <%if a.drug%>
+        <td><%= a.drug.name %></td>
+        <%end%>
+        <td><%= a.first_use %></td>
+        <td><%= a.total_use %></td>
+        <td><%= a.using_days %></td>
+        <td><%= a.use_code %></td>
+        <td><%= a.comments %></td>
+        <td><%= link_to 'ویرایش', edit_abusing_path(a)  %></td>
+        <td><%= link_to 'حذف', a, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  
+</table>
+
+</div>
+<br><br><br>
+<hr>
+<h1>ایجاد سو مصرف جدید</h1>
+<%= render :partial => '/abusings/make_abusing' , :locals =>{:patient => @patient}  %>
+
+
+<br><br><br><hr>
+<%if @patient.tasks.size > 0%>
+<h2>لیست آزمون‌های آزمودنی</h2><br>
+ <% @patient.tasks.each do |task| %>
+      تاریخ: <%= task.updated_at %>
+      <span style="float:left;"><%= link_to 'مشاهده‌ی آزمون', task%></span>
+      <br><br>  
+    <% end %>
+<%end%>
+
+<br><br><br>
+<hr><hr><br><br><br>
+  <strong>لیست آزمون‌‌گیرنده‌ها از این آزمودنی:</strong><br><br>
+  <div class="CSSTableGenerator" >
+<table>
+  
+    <tr>
+      <td>شماره‌ی شناسایی</td>
+      <td>نام</td>
+      <td>نام خانوادگی</td>
+      <td colspan="2"></td>
+
+
+    </tr>
+
+    <% @patient.regs.each do |r| %>
+      <tr>
+        <td><%= r.user.id %></td>
+        <td><%= r.user.profile.first_name %></td>
+        <td><%= r.user.profile.last_name %></td>
+        <td><%= link_to 'نمایش', r.user.profile %></td>
+        <td><%= link_to 'حذف', r, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  
+</table>
+
+
+</div>
+<br><br>
+<div><%= link_to 'انتخاب آزمون‌‌گیرنده‌ برای این آزمودنی', new_reg_path(:patient_id =>@patient.id)%></div>
+<br><br><br>
+</div>
+<h2>
+<%= link_to 'ویرایش', edit_patient_path(@patient) %> |
+<%= link_to 'بازگشت', patients_path %>
+</h2>
+</div>
+</div>

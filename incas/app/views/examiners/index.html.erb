@@ -1,0 +1,27 @@
+<h1>Listing examiners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Clinic</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @examiners.each do |examiner| %>
+      <tr>
+        <td><%= examiner.clinic_id %></td>
+        <td><%= examiner.user_id %></td>
+        <td><%= link_to 'Show', examiner %></td>
+        <td><%= link_to 'Edit', edit_examiner_path(examiner) %></td>
+        <td><%= link_to 'Destroy', examiner, method: :delete, data: { confirm: 'آیا اطمینان دارید؟' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Examiner', new_examiner_path %>

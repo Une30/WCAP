@@ -1,0 +1,51 @@
+
+<!--<h1>Listing ddtanswers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Q1</th>
+      <th>Q2</th>
+      <th>Q3</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ddtanswers.each do |ddtanswer| %>
+      <tr>
+        <td><%= ddtanswer.q1 %></td>
+        <td><%= ddtanswer.q2 %></td>
+        <td><%= ddtanswer.q3 %></td>
+        <td><%= link_to 'Show', ddtanswer %></td>
+        <td><%= link_to 'Edit', edit_ddtanswer_path(ddtanswer) %></td>
+        <td><%= link_to 'Destroy', ddtanswer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+-->
+<%= render "layouts/navbar"%> 
+<div class="wrap">
+  <h1>توضیح تست</h1>
+  <h2>شما شانس این را دارید که بین مقادیر مختلفی از پول با تاخیرات مختلف و هم‌چنین احتمالات متفاوت انتخاب کنید. این تست شامل ۱۱۰ سوال است که هر یک به یکی از این دو شکل است:</h2>
+  <h2>
+  "کدام‌یک از موارد زیر را ترجیح می‌دهید: همین الان بیست هزار تومان یا ۱۰۰ هزار تومان پس از گذشت ۴۰ روز"
+  </h2>
+  <h2>
+  یا
+  </h2>
+  <h2>
+  "کدام‌یک از موارد زیر را ترجیح می‌دهید: قطعا بیست هزار تومان یا ۱۰۰ هزار تومان با احتمال ۳۰ درصد"
+  </h2>
+  <h2>
+   در پایان این تست، یکی از انتخاب‌های شما به صورت تصادفی انتخاب می‌شود و شما مبلغی که برای آن سوال انتخاب کرده‌بودید را دریافت خواهید‌کرد.
+  </h2>
+
+  <h2>
+    با زدن دکمه‌ی شروع تست، تست آغاز خواهد شد.
+  </h2>
+  <h2><%= link_to 'شروع تست', new_ddtanswer_path %></h2>
+</div>

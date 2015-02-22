@@ -1,0 +1,75 @@
+<%= render "layouts/navbar"%>
+<div class="wrap">
+<h1>اطلاعات آزمون کنونی</h1><hr><br>
+
+<p id="notice"><%= notice %></p>
+
+<p class="patient_text">
+  <strong>آزمون‌گیرنده:</strong>
+  <%= @task.user.profile.first_name %>
+  <%= @task.user.profile.last_name %>
+</p>
+
+<p class="patient_text">
+  <strong>نام:</strong>
+  <%= @task.patient.first_name %>
+</p>
+
+<p class="patient_text">
+  <strong>نام خانوادگی:</strong>
+  <%= @task.patient.last_name %>
+</p>
+
+<p class="patient_text">
+  <strong>مرکز درمانی:</strong>
+  <%= @task.clinic.name %>
+</p>
+<br><br><hr>
+<p class="patient_text">
+  <strong>Delay Discounting Task:</strong>
+  <%if @task.ddtanswer %>
+   انجام شده است
+
+   <%if current_user.admin or current_user.manager or (current_user.supervisor and current_user.supervisor.clinic = @task.clinic)%>
+    <span style="float:left;"><%= link_to 'حذف', @task.ddtanswer, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+   <%end%>
+  <%else%>
+  انجام نشده است
+  <span style="float:left;"><%= link_to 'شروع آزمون', ddtanswers_path %></span>
+  <%end%>
+</p>
+
+<p class="patient_text">
+  <strong>GoNoGo Task:</strong>
+  <%if @task.gonogo %>
+   انجام شده است
+
+   <%if current_user.admin or current_user.manager or (current_user.supervisor and current_user.supervisor.clinic = @task.clinic)%>
+   <span style="float:left;"><%= link_to 'حذف', @task.gonogo, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+   <%end%>
+  <%else%>
+  انجام نشده است
+  <span style="float:left;"><%= link_to 'شروع آزمون', new_gonogo_path %></span>
+  <%end%>
+</p>
+
+<p class="patient_text">
+  <strong>Balloon Analysis Risk Task:</strong>
+  <%if @task.bart %>
+   انجام شده است
+   <%if current_user.admin or current_user.manager or (current_user.supervisor and current_user.supervisor.clinic = @task.clinic)%>
+   <span style="float:left;"><%= link_to 'حذف', @task.bart, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+   <%end%>
+  <%else%>
+  انجام نشده است
+  <span style="float:left;"><%= link_to 'شروع آزمون', new_bart_path %></span>
+  <%end%>
+</p>
+
+
+
+<br><br><br><br>
+<%if current_user.admin or current_user.manager or (current_user.supervisor and current_user.supervisor.clinic = @task.clinic)%>
+<t2 class="patient_text"><%= link_to 'حذف آزمون کنونی', @task, method: :delete, data: { confirm: 'Are you sure?' } %></t2>
+<%end%>
+</div>

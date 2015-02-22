@@ -1,0 +1,35 @@
+<hr><br>
+<%= form_for(@ddtquestion) do |f| %>
+  <% if @ddtquestion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ddtquestion.errors.count, "error") %> prohibited this ddtquestion from being saved:</h2>
+
+      <ul>
+      <% @ddtquestion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <div class="patient_text">type:</div><br>
+    <%= f.number_field :question_type , :class=>"text_field"%>
+  </div>
+  <div class="field">
+    <div class="patient_text">first value:</div><br>
+    <%= f.text_field :value1 , :class=>"text_field"%>
+  </div>
+  <div class="field">
+    <div class="patient_text">second value:</div><br>
+    <%= f.text_field :value2 , :class=>"text_field"%>
+  </div>
+  <div class="actions">
+    <%= f.submit 'ایجاد سوال DDT'%>
+  </div>
+  <div class="patient_text">third value:</div><br>
+    <%= f.text_field :value3 , :class=>"text_field"%>
+  </div>
+
+<% end %>
+

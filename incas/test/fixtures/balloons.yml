@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bart_id: 1
+  pumps: 1
+  explosion: false
+  response_time: 1
+
+two:
+  bart_id: 1
+  pumps: 1
+  explosion: false
+  response_time: 1

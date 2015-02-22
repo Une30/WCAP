@@ -1,0 +1,43 @@
+<%= render "layouts/navbar"%> 
+<div class="wrap">
+
+<h1>سوال:</h1>
+<hr><br>
+<p id="notice"><%= notice %></p>
+
+<!--<p>
+  <strong>Type:</strong>
+  <%= @ddtquestion.question_type %>
+</p>
+
+<p>
+  <strong>Value1:</strong>
+  <%= @ddtquestion.value1 %>
+</p>
+
+<p>
+  <strong>Value2:</strong>
+  <%= @ddtquestion.value2 %>
+</p>
+
+<p>
+  <strong>Value3:</strong>
+  <%= @ddtquestion.value3 %>
+</p>-->
+
+<%if @ddtquestion.question_type==1%>
+<!--<h2>Would you rather have <%= @ddtquestion.value1 %> now or <%= @ddtquestion.value2 %> in <%= @ddtquestion.value3 %>?</h2>-->
+<h2>کدام‌یک را ترجیح می‌دهید: </h2>
+<br><h2><%= @ddtquestion.value1 %> همین الان یا <%= @ddtquestion.value2 %> در <%= @ddtquestion.value3 %>؟</h2>
+<%end%>
+
+
+<%if @ddtquestion.question_type==2%>
+<!--<h2>Would you rather have <%= @ddtquestion.value1 %> for sure or <%= @ddtquestion.value2 %> with a <%= @ddtquestion.value3 %> chance?</h2>-->
+<h2>کدام‌یک را ترجیح می‌دهید: </h2>
+<br><h2><%= @ddtquestion.value1 %> به طور حتم یا <%= @ddtquestion.value2 %> با شانس <%= @ddtquestion.value3 %>؟</h2>
+<%end%>
+<br>
+<%= link_to 'Edit', edit_ddtquestion_path(@ddtquestion) %> |
+<%= link_to 'Back', ddtquestions_path %>
+</div>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  drug_id: 1
+  fisrt_use: 1
+  total_use: 1
+  using_days: 1
+  use_code: 1
+  comments: MyText
+
+two:
+  drug_id: 1
+  fisrt_use: 1
+  total_use: 1
+  using_days: 1
+  use_code: 1
+  comments: MyText

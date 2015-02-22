@@ -1,0 +1,55 @@
+// Place all the styles related to the Ddtanswers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.answer_field {
+	display:none;
+}
+
+#question {
+	font-size: 3.5em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.true_button {
+//        font-family: Verdana, Arial, sans-serif;
+        display: inline-block;
+        //background: #459300 url('../images/orange_bg.jpg') top left repeat-x;
+        border: 1px solid #459300 ;
+        padding: 10px 7px 10px 7px;
+        //color: #fff;
+        font-size: 3em;
+        cursor: pointer;
+ 	text-align: center;       
+ 	display: inline;
+ 	//margin-right: 20%;
+        height: 50%;
+}
+
+
+.false_button {
+//        font-family: Verdana, Arial, sans-serif;
+        display: inline-block;
+        //background: #459300 url('../images/orange_bg.jpg') top left repeat-x;
+        border: 1px solid #459300 ;
+        padding: 10px 7px 10px 7px;
+        //color: #fff;
+        font-size: 3em;
+        cursor: pointer;
+        text-align: center;       
+ 	display: inline;
+ 	margin-right: 15%;
+}
+
+#submit_ddt{
+	margin-left: 40%;	
+	width: 200px;
+	height: 40px;
+	font-size: 1.2em;
+}
+
+.thanks_image_ddt{
+        padding-right:17%;
+        //width:60%;
+       display:none; 
+}

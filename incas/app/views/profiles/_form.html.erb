@@ -1,0 +1,27 @@
+<hr><br>
+<%= form_for(@profile) do |f| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% @profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <div class="patient_text">نام:</div><br>
+    <%= f.text_field :first_name , :class=>"text_field" , autofocus: true%>
+  </div>
+  <div class="field">
+    <div class="patient_text">نام خانوادگی:</div><br>
+    <%= f.text_field :last_name , :class=>"text_field" , autofocus: true%>
+  </div>
+  <div class="actions wrap">
+    <%= f.submit 'ثبت اطلاعات شخصی'%>
+  </div>
+<% end %>

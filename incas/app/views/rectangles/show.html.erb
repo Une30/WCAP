@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Gonogo:</strong>
+  <%= @rectangle.gonogo_id %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @rectangle.state %>
+</p>
+
+<p>
+  <strong>Is clicked:</strong>
+  <%= @rectangle.is_clicked %>
+</p>
+
+<p>
+  <strong>Dispaly Time:</strong>
+  <%= @rectangle.display_time %>
+</p>
+
+<p>
+  <strong>Response Time:</strong>
+  <%= @rectangle.response_time %>
+</p>
+
+<p>
+  <strong>Reaction Time:</strong>
+  <%= @rectangle.reaction_time %>
+</p>
+<%= link_to 'Edit', edit_rectangle_path(@rectangle) %> |
+<%= link_to 'Back', rectangles_path %>

@@ -1,0 +1,42 @@
+<hr><br>
+<%= form_for(@task) do |f| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% @task.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!--<div class="field">
+    <%= f.label :patient_id %><br>
+    <%= f.number_field :patient_id %>
+  </div>
+  <div class="field">
+    <%= f.label :clinic_id %><br>
+    <%= f.number_field :clinic_id %>
+  </div>-->
+
+  <div class="field">
+     <div class="patient_text">انتخاب کلینیک:</div><br>
+    <div class="wrap"><%= f.select :clinic_id, Clinic.all.collect {|x| [x.name, x.id]}, {}, :multiple => false %></div>
+  </div>
+
+<div class="field">
+    <div class="patient_text">انتخاب بیمار بر اساس شماره پرونده:</div><br><br>
+    <%= f.number_field :patient_id , :class=>"text_field"%>
+  </div>
+  <!--
+  <div class="field">
+     <div class="patient_text">انتخاب بیمار بر اساس شماره پرونده:</div><br>
+    <div class="blank_text"><%= f.select :patient_id, Patient.all.collect {|x| [x.last_name, x.id]}, {}, :multiple => false %></div>
+  </div>-->
+
+  <div class="actions">
+    <%= f.submit 'ایجاد آزمون',:class=>"btn" %>
+  </div>
+<% end %>

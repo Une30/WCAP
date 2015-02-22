@@ -1,0 +1,44 @@
+
+<%= render "layouts/navbar"%> 
+<div class="wrap">
+<h1>لیست مراکز‌</h1>
+<hr><br>
+
+
+<div class="CSSTableGenerator" >
+<table>
+  
+    <tr>
+      <td>نام مرکز</td>
+      <td>نام مدیر</td>
+      <td>تعداد آزمون‌گیرنده‌ها</td>
+      <td colspan="3"></td>
+    </tr>
+  
+
+  
+    <% @clinics.each do |clinic| %>
+      <tr>
+        <td><%=clinic.name%></td>
+        <%if clinic.supervisor%>
+        <td><%=clinic.supervisor.user.profile.name%></td>
+        <%else%>
+        <td>ندارد</td>
+        <%end%>
+        <td><%=clinic.examiners.size%></td>
+        <td><%= link_to 'نمایش', clinic %></td>
+        <td><%= link_to 'ویرایش', edit_clinic_path(clinic) %></td>
+        <td><%= link_to 'حذف  ', clinic, method: :delete, data: { confirm: 'آیا اطمینان دارید؟' } %></td>
+      </tr>
+    <% end %>
+  
+</table>
+
+<br>
+
+</div>
+
+
+<br>
+
+</div>

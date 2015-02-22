@@ -1,0 +1,45 @@
+<%= form_for(@abusing) do |f| %>
+  <% if @abusing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@abusing.errors.count, "error") %> prohibited this abusing from being saved:</h2>
+
+      <ul>
+      <% @abusing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :drug_id %><br>
+    <%= f.number_field :drug_id %>
+  </div>
+  <div class="field">
+    <%= f.label :first_use %><br>
+    <%= f.number_field :first_use %>
+  </div>
+  <div class="field">
+    <%= f.label :total_use %><br>
+    <%= f.number_field :total_use %>
+  </div>
+  <div class="field">
+    <%= f.label :using_days %><br>
+    <%= f.number_field :using_days %>
+  </div>
+  <div class="field">
+    <%= f.label :use_code %><br>
+    <%= f.number_field :use_code %>
+  </div>
+  <div class="field">
+    <%= f.label :patient_id %><br>
+    <%= f.number_field :patient_id %>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br>
+    <%= f.text_area :comments %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

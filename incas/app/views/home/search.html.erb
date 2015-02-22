@@ -1,0 +1,33 @@
+<%= render "layouts/navbar"%> 
+<div class="wrap">
+
+<div class="CSSTableGenerator" >
+<table>
+  
+    <tr>
+      <td>شماره‌ی پرونده</td>
+      <td>نام</td>
+      <td>نام خانوادگی</td>
+      <td colspan="4"></td>
+    </tr>
+  
+
+  
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= patient.id %></td>
+        <td><%= patient.first_name %></td>
+        <td><%= patient.last_name %></td>
+        <td><%= link_to 'نمایش', patient %></td>
+        <td><%= link_to 'ویرایش', edit_patient_path(patient) %></td>
+        <td><%= link_to 'حذف', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'شروع تست جدید', new_task_path(:patient_id => patient.id) %></td>
+      </tr>
+    <% end %>
+  
+</table>
+
+<br>
+
+</div>
+</div>

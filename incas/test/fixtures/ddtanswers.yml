@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  q1: false
+  q2: false
+  q3: false
+
+two:
+  q1: false
+  q2: false
+  q3: false

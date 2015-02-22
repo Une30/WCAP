@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Drug:</strong>
+  <%= @abusing.drug_id %>
+</p>
+
+<p>
+  <strong>First use:</strong>
+  <%= @abusing.first_use %>
+</p>
+
+<p>
+  <strong>Total use:</strong>
+  <%= @abusing.total_use %>
+</p>
+
+<p>
+  <strong>Using days:</strong>
+  <%= @abusing.using_days %>
+</p>
+
+<p>
+  <strong>Use code:</strong>
+  <%= @abusing.use_code %>
+</p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @abusing.patient_id %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @abusing.comments %>
+</p>
+
+<%= link_to 'Edit', edit_abusing_path(@abusing) %> |
+<%= link_to 'Back', abusings_path %>

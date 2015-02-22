@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Clinic:</strong>
+  <%= @reg.clinic_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @reg.user_id %>
+</p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @reg.patient_id %>
+</p>
+
+<%= link_to 'Edit', edit_reg_path(@reg) %> |
+<%= link_to 'Back', regs_path %>

@@ -1,0 +1,28 @@
+  <div id="rectangle_properties">
+    <%= form_for(:rectangle, :url => rectangles_path, :id => "rectangle_form", :remote => true ) do |f| %>
+
+  <%= f.hidden_field :gonogo_id, :value => gonogo.id %>
+  <div class="field" id="state">
+    <%= f.label :state %><br>
+    <%= f.number_field :state %>
+  </div>
+  <div class="field" id="is_clicked">
+    <%= f.label :is_clicked %><br>
+    <%= f.number_field :is_clicked %>
+  </div>
+  <div class="field" id="display_time">
+    <%= f.label :display_time %><br>
+    <%= f.number_field :display_time %>
+  </div>
+  <div class="field" id="response_time">
+    <%= f.label :response_time %><br>
+    <%= f.number_field :response_time %>
+  </div>
+  <div class="field" id="reaction_time">
+    <%= f.label :reaction_time %><br>
+    <%= f.number_field :reaction_time %>
+  </div>
+      <input type="submit" value="Save Rectangle" name="commit" id="submit_rectangle">
+      </input>
+    <% end %>
+</div>

@@ -1,0 +1,50 @@
+<%= render "layouts/navbar"%> 
+<div class="wrap">
+<h1>لیست آزمودنی‌ها</h1>
+<br>
+
+<%= form_tag '/home/search', :method => :get   do%>
+  <%= text_field_tag :q , nil ,:class =>"form-control" , :placeholder => "جست‌وجو"%>
+  <%= submit_tag 'پیدا کن!'%>
+<%end%>
+
+<div class="CSSTableGenerator" >
+<table>
+  
+    <tr>
+      <td>شماره‌ی پرونده</td>
+      <td>نام</td>
+      <td>نام خانوادگی</td>
+      <%if current_user.admin or current_user.manager%>
+      <td colspan="4"></td>
+      <%else%>
+      <td colspan="3"></td>
+      <%end%>
+    </tr>
+  
+
+  
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= patient.id %></td>
+        <td><%= patient.first_name %></td>
+        <td><%= patient.last_name %></td>
+        <td><%= link_to 'نمایش', patient %></td>
+        <td><%= link_to 'ویرایش', edit_patient_path(patient) %></td>
+        <%if current_user.admin or current_user.manager%>
+        <td><%= link_to 'حذف', patient, method: :delete, data: { confirm: 'آیا اطمینان دارید؟' } %></td>
+        <%end%>
+        <%if current_user.examiners.size>0%>
+          <td><%= link_to 'شروع تست جدید', new_task_path(:patient_id => patient.id) %></td>
+        <%end%>
+      </tr>
+    <% end %>
+  
+</table>
+
+<br>
+
+</div>
+</div>
+
+

@@ -1,0 +1,33 @@
+<%= form_for(@gonogo) do |f| %>
+  <% if @gonogo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gonogo.errors.count, "error") %> prohibited this gonogo from being saved:</h2>
+
+      <ul>
+      <% @gonogo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="wrap">
+    <h1>توضیح تست</h1><br>
+    <h2  >انگشت اشاره‌تان را بر روی دکمه‌ی "1" قرار دهید. در هر تست، یک مستطیل سفید روی صفحه ظاهر می‌شود. سپس پس از مدت کوتاهی، رنگ مستطیل به آبی یا سبز تغییر می‌کند.
+    </h2>
+    <h2>
+    اگر مستطیل سبز شد، دکمه‌ را به سرعت فشار دهید.
+    </h2>
+    <h2>
+    اگر مستطیل آبی شد، هیچ کاری انجام ندهید.
+    سعی کنید به ازای مستطیل‌های سبز هرچه سریع‌تر پاسخ دهید.
+    </h2>
+    <h2>
+    انجام این تست ۱۰ تا ۱۵ دقیقه زمان می‌برد.
+    </h2>
+    <h2>
+    با زدن دکمه‌ی شروع تست، تست آغاز خواهد شد.
+    </h2><br>
+    <input type="submit" value="شروع تست" name="commit" id="submit_gonogo"  style = "font-family:'Yekan'">
+        </input>
+  </div>
+<% end %>

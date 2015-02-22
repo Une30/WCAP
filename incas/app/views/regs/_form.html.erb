@@ -1,0 +1,69 @@
+<hr><br>
+<%= form_for(@reg) do |f| %>
+  <% if @reg.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reg.errors.count, "error") %> prohibited this reg from being saved:</h2>
+
+      <ul>
+      <% @reg.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <!--<div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :patient_id %><br>
+    <%= f.number_field :patient_id %>
+  </div>-->
+  
+  <%if @patient%>
+    <div class="patient_text">
+    <strong>نام:</strong>
+    <%= @patient.first_name %>
+    <br><br><strong>نام خانوادگی:</strong>
+    <%= @patient.last_name %>
+    <br><br><strong>شماره‌ی پرونده:</strong>
+    <%= @patient.id %>
+    <br><br><br>
+    </div>
+    <div class="field">
+       <div class="patient_text">انتخاب آزمون‌گیرنده برای این بیمار:</div><br>
+      <div class="wrap"><%= f.select :user_id, User.all.collect {|x| [x.profile.name, x.id]}, {}, :multiple => false %></div>
+    
+
+    <div class="actions">
+      <%= f.hidden_field :patient_id, :value => @patient.id %>
+      <%= f.submit 'تایید'%>
+    </div>
+
+  <%else%>
+    <div class="field">
+      <div class="patient_text">نام:</div><br>
+      <!--<%= text_field :first_name , :class=>"text_field" , autofocus: true %>-->
+      <%=text_field_tag 'first_name'%>
+    </div>
+
+    <div class="field">
+      <div class="patient_text">نام خانوادگی:</div><br>
+      <!--<%= text_field :last_name , :class=>"text_field" , autofocus: true %>-->
+          <%=text_field_tag 'last_name'%>
+    </div>
+
+  <%end%>
+
+  <div class="field">
+  <div class="patient_text">انتخاب مرکز درمانی:</div><br>
+    <div class="wrap"><%= f.select :clinic_id, Clinic.all.collect {|x| [x.name, x.id]}, {}, :multiple => false %></div>
+  </div>
+
+  <div class="actions wrap">
+    <%= f.submit 'ثبت‌نام'%>
+  </div>
+
+<% end %>

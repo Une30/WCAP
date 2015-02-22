@@ -1,0 +1,73 @@
+<hr><br>
+
+<%= form_for(@patient) do |f| %>
+  <% if @patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+      <% @patient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <div class="patient_text">نام:</div><br>
+    <%= f.text_field :first_name , :class=>"text_field" , autofocus: true %>
+  </div>
+
+  <div class="field">
+    <div class="patient_text">نام خانوادگی:</div><br>
+    <%= f.text_field :last_name , :class=>"text_field" , autofocus: true %>
+  </div>
+
+
+  <div class="field">
+    <div class="patient_text">شماره‌ی پرونده‌ی مراجع:</div><br>
+    
+    <%= f.number_field :file_number, :class=>"text_field" , autofocus: true %>
+  <span>مثال:   3456784567 </span></div>
+
+
+  <div class="field">
+    <div class="patient_text">کد اختصاصی ۱۰ رقمی:</div><br>
+    <%= f.number_field :private_code, :class=>"text_field" , autofocus: true %>
+  </div>
+  
+
+  <div class="field">
+    <div class="patient_text">جنسیت:</div><br>  
+    <%=f.radio_button :gender , true %><span>مرد</span>
+    <%=f.radio_button :gender, false %><span>زن</span>
+  </div>
+
+
+  <div class="field">
+    <div class="patient_text">تاریخ تولد:</div><br>    
+    <%= f.datetime_select :year_of_birth , :class=>"text_field" , autofocus: true %>
+  </div>
+  
+  <div class="field">
+    <div class="patient_text">تاریخ مصاحبه:</div><br>
+    <%= f.datetime_select :interview_date, :class=>"text_field" , autofocus: true %>
+  </div>
+
+
+  <div class="field">
+    <div class="patient_text">وضعیت تاهل:</div><br>
+    <%= f.text_field :marital_status, :class=>"text_field" , autofocus: true %>
+  </div>
+  
+
+  <div class="field">
+    <div class="patient_text">میزان تحصیلات به سال(برای مثال لیسانس معادل ۱۶ سال است):</div><br>  
+    <%= f.number_field :educational_year, :class=>"text_field" , autofocus: true %>
+  </div>
+
+  <div class="actions wrap" >
+    <%= f.submit 'ثبت اطلاعات آزمودنی' ,:class=>"btn" %>
+  </div>
+<% end %>

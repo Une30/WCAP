@@ -1,0 +1,29 @@
+<h1>Listing regs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Clinic</th>
+      <th>User</th>
+      <th>Patient</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @regs.each do |reg| %>
+      <tr>
+        <td><%= reg.clinic_id %></td>
+        <td><%= reg.user_id %></td>
+        <td><%= reg.patient_id %></td>
+        <td><%= link_to 'Show', reg %></td>
+        <td><%= link_to 'Edit', edit_reg_path(reg) %></td>
+        <td><%= link_to 'Destroy', reg, method: :delete, data: { confirm: 'آیا اطمینان دارید؟' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reg', new_reg_path %>

@@ -1,0 +1,27 @@
+<h1>Listing supervisors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Clinic</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @supervisors.each do |supervisor| %>
+      <tr>
+        <td><%= supervisor.user_id %></td>
+        <td><%= supervisor.clinic_id %></td>
+        <td><%= link_to 'Show', supervisor %></td>
+        <td><%= link_to 'Edit', edit_supervisor_path(supervisor) %></td>
+        <td><%= link_to 'Destroy', supervisor, method: :delete, data: { confirm: 'آیا اطمینان دارید؟' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Supervisor', new_supervisor_path %>

@@ -1,0 +1,39 @@
+
+<%=image_tag "IncasLogo.PNG", {:alt => "home image", :width => '100%'}%>
+<div id = "description">
+
+<p style="font-size:1.4em ;" >بسته‌ی ارزیابی شناختی تحت شبکه (وی‌کاپ) با همکاری گروه هوش ماشین و رباتیک دانشگاه تهران و مرکز ملی مطالعات اعتیاد تدوین گردیده‌است.</p>
+<p style="font-size:1.4em ;">
+این بسته شامل آزمون‌های ارزیابی شناختی می‌باشد که تا کنون ۳ آزمون :<br>
+<ul style="font-size:1.4em ;" >
+<li> Delay Discounting Test </li>
+<li> Balloon Analogue Risk Task </li>
+<li> Cued Go No Go</li>
+</ul>
+<p style="font-size:1.4em ;">
+پیاده سازی شده است و امکان استفاده از این آزمون‌ها در مراکز و آزمایشگاه‌ها به‌وسیله‌ی آزمونگرها موجود است.
+</p>
+</p>
+
+	
+</div>
+
+<div id="sign_in_form">
+	<h2 class="label">ورود</h2>
+
+	<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+	  <div class="label"><%= f.label :email %><br />
+	  <%= f.email_field :email, autofocus: true %></div>
+
+	  <div class="label"><%= f.label :password %><br />
+	    <%= f.password_field :password, autocomplete: "off" %></div>
+
+	  <% if devise_mapping.rememberable? -%>
+	    <div id="remember_me" class="label"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+	  <% end -%>
+
+	  <div id="enter" class="label"><%= f.submit "ورود" %></div>
+	<% end %>
+
+	<%= render "devise/shared/links" %>
+</div>

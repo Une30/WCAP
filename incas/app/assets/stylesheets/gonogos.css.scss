@@ -1,0 +1,29 @@
+// Place all the styles related to the Gonogos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#rectangle_properties {
+	display:none;
+}
+
+#exit {
+	display:none;
+	width: 100%;
+}
+
+#thanks {
+	padding-left:35%;
+	direction: rtl;
+	
+}
+
+#submit_gonogo{
+	margin-left: 40%;	
+	width: 270px;
+	height: 100px;
+	font-size: 3em;
+}
+
+.thanks_image{
+	padding-right:17%;
+	//width:60%
+}

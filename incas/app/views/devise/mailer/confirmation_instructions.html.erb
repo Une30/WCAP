@@ -1,0 +1,17 @@
+<%=image_tag "IncasLogo.PNG", {:alt => "home image", :width => '100%'}%>
+<style>
+	
+body{
+		background-image: url('addiction.jpg') !important;
+}
+
+
+</style>
+<div class="wrap">
+
+<p>Welcome <%= @email %>!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+</div>

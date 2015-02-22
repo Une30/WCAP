@@ -1,0 +1,33 @@
+
+    <%= form_for(:abusing, :url => abusings_path, :id => "abusing_form") do |f| %>
+
+      <%= f.hidden_field :patient_id, :value => patient.id %>
+      
+      <div class="field">
+        <div class="patient_text">نوع ماده:</div><br>
+        <div class="wrap"><%= f.select :drug_id, Drug.all.collect {|x| [x.name, x.id]}, {}, :multiple => false %></div>
+      </div>
+      <div class="field">
+        <div class="patient_text">اولین باری که از این ماده استفاده کرده‌ چند‌ساله بوده‌است؟(سن شروع):</div><br>
+        <%= f.number_field :fisrt_use , :class=>"text_field" , autofocus: true %>
+      </div>
+      <div class="field">
+        <div class="patient_text">مجموعا چند سال مصرف مداوم این ماده را داشته‌است؟(وابستگی):</div><br>
+        <%= f.number_field :total_use , :class=>"text_field" , autofocus: true %>
+      </div>
+      <div class="field">
+        <div class="patient_text">روزهای استفاده(در ۳۰ روز گذشته):</div><br>
+        <%= f.number_field :using_days , :class=>"text_field" , autofocus: true %>
+      </div>
+      <div class="field">
+        <div class="patient_text">کد روش غالب مصرف(در ۳۰ روز گذشته):</div><br>
+        <%= f.number_field :use_code , :class=>"text_field" , autofocus: true %>
+      </div>
+      <div class="field">
+        <div class="patient_text">توضیحات:</div><br>
+        <%= f.text_area :comments , :class=>"text_field" , autofocus: true %>
+      </div>
+
+      <input type="submit" value="ایجاد سومصرف" name="commit" id="submit_abusing" class="btn">
+      </input>
+    <% end %>

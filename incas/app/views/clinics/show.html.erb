@@ -1,0 +1,50 @@
+
+<%= render "layouts/navbar"%> 
+<div class="wrap">
+<h1>اطلاعات مرکز</h1>
+<hr><br>
+<p id="notice"><%= notice %></p>
+
+<div class="patient_text">
+  <strong>نام مرکز:</strong>
+  	<span style="float:left;"><%= link_to 'ویرایش', edit_clinic_path(@clinic) %></span>
+    <%= @clinic.name %><br><br>
+    
+  <strong>نام مدیر:</strong>
+  <%if @clinic.supervisor%>
+  	<%= @clinic.supervisor.user.profile.name %>
+  	<span style="float:left;"><%= link_to 'تغییر مدیر', edit_supervisor_path(@clinic.supervisor) %></span>
+  <%else%>
+	هنوز برای این مرکز مدیر انتخاب نشده‌است.  
+	<span style="float:left;"><%= link_to 'انتخاب مدیر', new_supervisor_path%></span>
+  <%end%>
+<hr><hr><br><br><br>
+  <strong>لیست آزمون‌‌گیرنده‌ها در مرکز:</strong><br><br>
+  <div class="CSSTableGenerator" >
+<table>
+  
+    <tr>
+      <td>شماره‌ی شناسایی</td>
+      <td>نام</td>
+      <td>نام خانوادگی</td>
+      <td colspan="2"></td>
+    </tr>
+
+    <% @clinic.examiners.each do |e| %>
+      <tr>
+        <td><%= e.user.id %></td>
+        <td><%= e.user.profile.first_name %></td>
+        <td><%= e.user.profile.last_name %></td>
+        <td><%= link_to 'نمایش', e.user.profile %></td>
+        <td><%= link_to 'حذف', e, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  
+</table>
+
+
+</div>
+<br><br>
+<div><%= link_to 'انتخاب آزمون‌‌گیرنده‌ برای این مرکز', new_examiner_path%></div>
+<br><br><br>
+</div>
