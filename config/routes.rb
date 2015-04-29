@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :stroops
+
   resources :abusings
 
   resources :abuses

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Task:</strong>
+  <%= @stroop.task_id %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @stroop.duration %>
+</p>
+
+<p>
+  <strong>Before stimulation:</strong>
+  <%= @stroop.before_stimulation %>
+</p>
+
+<p>
+  <strong>Total items:</strong>
+  <%= @stroop.total_items %>
+</p>
+
+<p>
+  <strong>Correct items:</strong>
+  <%= @stroop.correct_items %>
+</p>
+
+<%= link_to 'Edit', edit_stroop_path(@stroop) %> |
+<%= link_to 'Back', stroops_path %>
