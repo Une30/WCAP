@@ -1,25 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    
     <meta charset="utf-8" />
     <title>Incas</title>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
-    <!--<% if user_signed_in? %>
-      وارد شده توسط <strong><%= current_user.email %></strong>.|
-      <%= link_to 'ویرایش پروفایل', edit_user_registration_path, :class => 'navbar-link' %> |
-      <%= link_to "خروج", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-    <% else %>
-      <%= link_to "ثبت‌نام", new_user_registration_path, :class => 'navbar-link'  %> |
-      <%= link_to "ورود", new_user_session_path, :class => 'navbar-link'  %>
-    <% end %>-->
-    <%= yield %>
-  </body>
+  <div class="main-div">
+    <body>
+      <%= yield %>
+    </body>
+  </div>
 </html>
