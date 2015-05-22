@@ -153,6 +153,7 @@ ActiveRecord::Schema.define(version: 20150429072713) do
     t.boolean  "before_stimulation"
     t.integer  "total_items"
     t.integer  "correct_items"
+    t.boolean  "finished"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

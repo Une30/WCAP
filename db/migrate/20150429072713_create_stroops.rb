@@ -6,6 +6,7 @@ class CreateStroops < ActiveRecord::Migration
       t.boolean :before_stimulation
       t.integer :total_items
       t.integer :correct_items
+      t.boolean :finished
 
       t.timestamps
     end

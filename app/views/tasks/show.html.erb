@@ -67,12 +67,33 @@
 </p>
 
 
+
 <p class="patient_text">
-  <strong>Stroop Task:</strong>
-  
+  <strong>Stroop task before stimulation:</strong>
+  <%if @task.stroops.first.finished %>
+   انجام شده است
+   <%if current_user.admin or current_user.manager or (current_user.supervisor and current_user.supervisor.clinic = @task.clinic)%>
+   <span style="float:left;"><%= link_to 'حذف', @task.stroops.first, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+   <%end%>
+  <%else%>
   انجام نشده است
-  <span style="float:left;"><%= link_to 'شروع آزمون', new_stroop_path%></span>
-  
+  <span style="float:left;"><%= link_to 'شروع آزمون', edit_stroop_path(@task.stroops.first) %></span>
+  <%end%>
+</p>
+
+
+
+<p class="patient_text">
+  <strong>Stroop task after stimulation:</strong>
+  <%if @task.stroops.last.finished %>
+   انجام شده است
+   <%if current_user.admin or current_user.manager or (current_user.supervisor and current_user.supervisor.clinic = @task.clinic)%>
+   <span style="float:left;"><%= link_to 'حذف', @task.stroops.last, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+   <%end%>
+  <%else%>
+  انجام نشده است
+  <span style="float:left;"><%= link_to 'شروع آزمون', edit_stroop_path(@task.stroops.last) %></span>
+  <%end%>
 </p>
 
 
