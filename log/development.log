@@ -29396,3 +29396,907 @@ Processing by BalloonsController#show as JS
   [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks"  WHERE "tasks"."user_id" = ?  ORDER BY "tasks"."id" DESC LIMIT 1[0m  [["user_id", 4]]
   Rendered balloons/show.html.erb within layouts/application (0.4ms)
 Completed 200 OK in 48ms (Views: 32.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-22 14:35:45 +0430
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 23ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2015-05-22 14:35:45 +0430
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (77.0ms)
+Completed 200 OK in 960ms (Views: 945.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/abuses.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/abusings.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/barts.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/balloons.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/clinics.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/ddtquestions.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/ddtanswers.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/examiners.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/gonogos.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/mainStyle.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/rectangles.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/regs.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/stroops.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/styleGONOGO.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/supervisors.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/abuses.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/abusings.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/balloons.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/barts.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/fonts/Yekan.eot" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/clinics.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/ddt.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/ddtanswers.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/ddtquestions.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/examiners.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/fonts/Yekan.woff" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/gonogos.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/jquery.bart.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/jquery.jcanvas.min.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/navbar.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/rectangles.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/regs.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/stroops.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/supervisors.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-22 14:35:46 +0430
+
+
+Started GET "/assets/IncasLogo.PNG" for 127.0.0.1 at 2015-05-22 14:35:47 +0430
+
+
+Started GET "/assets/white.png" for 127.0.0.1 at 2015-05-22 14:35:47 +0430
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-05-22 14:36:17 +0430
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8cGMgrMHU47s7MZfs68v4B8MaE7Ya5lbQW67gk0l4lU=", "user"=>{"email"=>"maryam.younesi00@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ورود"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'maryam.younesi00@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 141ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8cGMgrMHU47s7MZfs68v4B8MaE7Ya5lbQW67gk0l4lU=", "user"=>{"email"=>"maryam.younesi00@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ورود"}
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 98ms (Views: 22.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/clinics.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:17 +0430
+
+
+Started GET "/assets/ddt.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/ddtanswers.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/ddtquestions.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/examiners.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/jquery.bart.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/gonogos.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/jquery.jcanvas.min.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/navbar.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/rectangles.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/regs.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/stroops.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/supervisors.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/abuses.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/abusings.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/balloons.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/barts.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/clinics.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/ddtanswers.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/ddtquestions.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/examiners.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/gonogos.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/mainStyle.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/rectangles.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/regs.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/stroops.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/styleGONOGO.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/supervisors.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/abuses.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/abusings.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/balloons.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started GET "/assets/barts.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:18 +0430
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8cGMgrMHU47s7MZfs68v4B8MaE7Ya5lbQW67gk0l4lU=", "user"=>{"email"=>"maryam.younesi00@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ورود"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'maryam.younesi00@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 2[0m  [["current_sign_in_at", "2015-05-22 10:06:30.281058"], ["last_sign_in_at", "2015-05-12 07:09:52.223650"], ["sign_in_count", 3], ["updated_at", "2015-05-22 10:06:30.282302"]]
+  [1m[35m (109.2ms)[0m  commit transaction
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 2]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 283ms (ActiveRecord: 110.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mTask Load (0.3ms)[0m  SELECT  "tasks".* FROM "tasks"  WHERE "tasks"."user_id" = ?  ORDER BY "tasks"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "examiners"  WHERE "examiners"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered layouts/_navbar.html.erb (13.2ms)
+  Rendered home/index.html.erb within layouts/application (46.0ms)
+Completed 200 OK in 119ms (Views: 85.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/abuses.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/abusings.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/balloons.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/barts.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/ddtanswers.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/clinics.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/ddtquestions.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/examiners.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/gonogos.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/mainStyle.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/rectangles.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/regs.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/stroops.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/styleGONOGO.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/supervisors.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/abuses.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/abusings.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/balloons.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/barts.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/clinics.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/ddt.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/ddtanswers.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/ddtquestions.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/examiners.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/gonogos.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/jquery.bart.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/jquery.jcanvas.min.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/navbar.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/rectangles.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/regs.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/stroops.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/supervisors.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:30 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-22 14:36:31 +0430
+
+
+Started GET "/assets/66.jpg" for 127.0.0.1 at 2015-05-22 14:36:31 +0430
+
+
+Started GET "/assets/fonts/Badr.eot" for 127.0.0.1 at 2015-05-22 14:36:31 +0430
+
+
+Started GET "/assets/fonts/Badr.woff" for 127.0.0.1 at 2015-05-22 14:36:31 +0430
+
+
+Started GET "/assets/fonts/Yekan.woff" for 127.0.0.1 at 2015-05-22 14:37:28 +0430
+
+
+Started GET "/assets/fonts/Yekan.woff" for 127.0.0.1 at 2015-05-22 14:37:28 +0430
+
+
+Started GET "/assets/fonts/Yekan.woff" for 127.0.0.1 at 2015-05-22 14:37:28 +0430
+
+
+Started GET "/assets/fonts/Yekan.woff" for 127.0.0.1 at 2015-05-22 14:37:52 +0430
+
+
+Started GET "/assets/fonts/Yekan.woff" for 127.0.0.1 at 2015-05-22 14:37:52 +0430
+
+
+Started GET "/assets/fonts/Yekan.woff" for 127.0.0.1 at 2015-05-22 14:37:52 +0430
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks"  WHERE "tasks"."user_id" = ?  ORDER BY "tasks"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "examiners"  WHERE "examiners"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered layouts/_navbar.html.erb (2.3ms)
+  Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 116ms (Views: 111.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/abuses.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/abusings.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/balloons.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/clinics.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/ddtquestions.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/ddtanswers.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/barts.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/examiners.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/gonogos.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/mainStyle.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/rectangles.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/regs.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/stroops.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/styleGONOGO.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/supervisors.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/abuses.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/abusings.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/balloons.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/barts.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/clinics.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/ddt.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/ddtanswers.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/ddtquestions.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/examiners.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/gonogos.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/jquery.bart.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/jquery.jcanvas.min.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/navbar.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/rectangles.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/regs.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/stroops.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/supervisors.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/fonts/Yekan.eot" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/IncasLogo.PNG" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/66.jpg" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/white.png" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/assets/fonts/Badr.eot" for 127.0.0.1 at 2015-05-22 14:39:02 +0430
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."user_id" = ? LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks"  WHERE "tasks"."user_id" = ?  ORDER BY "tasks"."id" DESC LIMIT 1  [["user_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "examiners"  WHERE "examiners"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered layouts/_navbar.html.erb (2.4ms)
+  Rendered home/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 80ms (Views: 71.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/abuses.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/abusings.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/balloons.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/barts.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/clinics.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/ddtanswers.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/ddtquestions.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/examiners.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/drugs.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/gonogos.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/mainStyle.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/navbar.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/patients.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/rectangles.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/regs.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/stroops.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/styleGONOGO.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/supervisors.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/table.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/tasks.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/abuses.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/abusings.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/balloons.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/barts.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/clinics.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/ddt.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/ddtquestions.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/drugs.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/ddtanswers.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/examiners.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/gonogos.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/jquery-1.9.1.min.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/jquery.bart.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/jquery.jcanvas.min.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/navbar.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/patients.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/rectangles.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/regs.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/stroops.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/supervisors.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/tasks.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/fonts/Yekan.eot" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/IncasLogo.PNG" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/66.jpg" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/white.png" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
+
+
+Started GET "/assets/fonts/Badr.eot" for 127.0.0.1 at 2015-05-22 14:39:45 +0430
