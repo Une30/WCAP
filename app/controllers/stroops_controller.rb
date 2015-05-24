@@ -40,10 +40,10 @@ class StroopsController < ApplicationController
   # PATCH/PUT /stroops/1
   # PATCH/PUT /stroops/1.json
   def update
+    @stroop.finished = true
     respond_to do |format|
       if @stroop.update(stroop_params)
-        format.html { redirect_to @stroop, notice: 'Stroop was successfully updated.' }
-        format.json { render :show, status: :ok, location: @stroop }
+        format.html { redirect_to @stroop.task, notice: 'Stroop was successfully updated.' }
       else
         format.html { render :edit }
         format.json { render json: @stroop.errors, status: :unprocessable_entity }

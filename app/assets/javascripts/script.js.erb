@@ -90,6 +90,13 @@ function ini() {
     var_linkToResults        = document.getElementById('linkToResults');
     var_textareaResults      = document.getElementById('textareaResults');
     body                 = document.getElementById('body');
+
+    document.getElementById("start_btn").style.display = 'block'
+    document.getElementById("red_btn").style.display = 'none'
+    document.getElementById("blue_btn").style.display = 'none'
+    document.getElementById("green_btn").style.display = 'none'
+    document.getElementById("yellow_btn").style.display = 'none'
+    document.getElementById("cancel_btn").style.display = 'none'
     
     screensPossible.instructions = screenInstructions;
     screensPossible.experiment   = screenExperiment;
@@ -117,8 +124,9 @@ function iniWordArray() {
     
     var i = 0;
     
+    var word_count = 24;
     //Don't break unless we tell you to.
-    while (true) {
+    while (word_count -- > 0) {
         //Determine the type of this word randomly
         var type = silo.selectRandom();
         
@@ -134,6 +142,7 @@ function iniWordArray() {
         wordArray[i] = new WordSilo();
         //wordArray[i] = new Object();
         wordArray[i].type = type;
+        wordArray[i].success= false;
         
         if (type == 'diff') {
             wordArray[i].color   = info[color].color;
@@ -165,6 +174,7 @@ function iniWordArray() {
  * event input#input onkeyup
  */
 function eventInput(input) {
+    //alert(counter);
     var value = input;
     // alert(wordArray.length + " --- " + counter);
     // input.value = ''; //clear the field
@@ -177,6 +187,11 @@ function eventInput(input) {
             return true;
         }
         document.getElementById("start_btn").style.display = 'none'
+        document.getElementById("red_btn").style.display = 'block'
+        document.getElementById("blue_btn").style.display = 'block'
+        document.getElementById("green_btn").style.display = 'block'
+        document.getElementById("yellow_btn").style.display = 'block'
+        document.getElementById("cancel_btn").style.display = 'block'
         state = 'standby';
         paintMessage('Starting...');
         setTimeout("setStandby()",1000);
@@ -195,17 +210,21 @@ function eventInput(input) {
         if (wordArray[counter - 1].color == keyToColor[value]) {
             timeEnd = (new Date()).getTime();
             var time = timeEnd - timeStart
-            wordArray[counter - 1].time = time;  
+            wordArray[counter - 1].time = time; 
+            wordArray[counter -1].success = true;
             paintMessage('Correct.');  
 
         } else if (keyToColor[value] == 'cancel') {
-            paintMessage('Okay, Trial Discarded.');
-            shuffleLast();
+            location.reload();
+            return true;
         } else {
             //Response was incorrect, reassign it to a later area.
             //TODO: port this to a function and make it random
+            timeEnd = (new Date()).getTime();
+            var time = timeEnd - timeStart
+            wordArray[counter - 1].time = time;  
+            wordArray[counter -1].success = false;
             paintMessage('INCORRECT.');
-            shuffleLast();
         }
         state = 'afteranswer';
     }
@@ -216,10 +235,12 @@ function eventInput(input) {
         
         if (counter == wordArray.length) {
             //TODO: setTimeOut for message display
-            paintMessage('You are done! There is a link to your results above.');
-            paintColoredWord('HOORAY!','#FFF');
-            paintResult();
-            paintResultLink();
+            // paintMessage('You are done! There is a link to your results above.');
+            // paintColoredWord('HOORAY!','#FFF');
+            // paintResult();
+            // paintResultLink();
+            submitResult();
+
             return true;
         }
         
@@ -322,5 +343,21 @@ function randomBetween(start, stop) {
 }
 
 function submitResult(){
-    
+    // alert("boogh");
+    var size = wordArray.length;
+    var num_of_correct = 0;
+    var num_of_wrong = 0;
+    var time = 0;
+    for(var i = 0; i < size; i++) {   
+        if (wordArray[i].success == true) {
+            num_of_correct ++;
+        } else {
+            num_of_wrong ++;
+        }
+        time += wordArray[i].time
+    }
+    document.getElementById("stroop_total_items").value = size;
+    document.getElementById("stroop_duration").value = time;
+    document.getElementById("stroop_correct_items").value = num_of_correct;
+    document.forms["stroop_edit_form"].submit();
 }

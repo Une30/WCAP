@@ -1,11 +1,20 @@
 <head>
-    <title>Stroop Effect - Interactive Test</title>
+    <title>تست استروپ</title>
     <meta name="Author" content="Edward Z. Yang" />
     <meta charset="UTF-8">
     <meta name="keywords" content="Stroop Effect, test, interactive, JavaScript" />
     <meta http-equiv="Content-Script-Type" content="javascript" />
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <style type="text/css" style="display: none">
+    .main-div{background: none; background-color: #fff;}
+    </style>
     <%= stylesheet_link_tag "stroop", media: "screen"%>
+     <script type="text/javascript">
+            
+        $(document).ready(function() {   
+            document.getElementById("hidden-form").style.display = "none";
+        });
+        </script>
 
     <!-- <link href="screen.css" media="screen" rel="stylesheet" type="text/css" /> -->
     <%= javascript_include_tag "classes"%>
@@ -13,20 +22,9 @@
     <%= javascript_include_tag "stroop"%>
 </head>
 <body onload="ini();" id="body">
-    <noscript>
-        <div id="checkJavaScript">
-            <h1>Warning: JavaScript is Disabled</h1>
-            <p>It looks like your user agent cannot handle
-            JavaScript. We're sorry, but you cannot use the interactive features
-            on this page, as, by its nature, it is a JavaScript driven of example
-            of the Stroop effect. Consider getting a
-            <a href="http://www.mozilla.org/products/firefox/">better browser</a>
-            or enabling JavaScript if you would like to try the example.</p>
-        </div>
-    </noscript>
     
     <div id="clientbox">
-        <h1>Stroop Effect - Interactive Test</h1>
+        <h1>تست استروپ</h1>
         
         <div id="infoswitch">
             <ul>
@@ -39,12 +37,13 @@
     <div id="screenExperiment">
         <div><input type="text" readonly="readonly" id="displayOfColoredWord" /></div>
         <div><input type="text" readonly="readonly" id="displayOfMessage" /></div>
-        <div id="start_btn" class="stroop-btn"> <button type="button"  onclick="eventInput('start')" >start</button> </div>
-        <div id="red_btn" class="stroop-btn"> <button type="button"  onclick="eventInput('r')" >red</button> </div>
-        <div id="green_btn" class="stroop-btn"> <button type="button"  onclick="eventInput('g')" >green</button> </div>
-        <div id="yellow_btn" class="stroop-btn"> <button type="button"  onclick="eventInput('y')" >yellow</button> </div>
-        <div id="blue_btn" class="stroop-btn"> <button type="button"  onclick="eventInput('b')" >blue</button> </div>
-        <div id="cancel_btn" class="stroop-btn"> <button type="button"  onclick="eventInput('x')" >cancel</button> </div>
+        <div id="start_btn" class="stroop-btn"> <button type="button"  onclick="eventInput('start')" >شروع</button> </div>
+        <div id="red_btn" class="stroop-btn"> <button type="button"  onclick="eventInput('r')" >قرمز</button> </div>
+        <div id="green_btn" class="stroop-btn"> <button type="button"  onclick="eventInput('g')" >سبز</button> </div>
+        <div id="yellow_btn" class="stroop-btn"> <button type="button"  onclick="eventInput('y')" >زرد</button> </div>
+        <div id="blue_btn" class="stroop-btn"> <button type="button"  onclick="eventInput('b')" >آبی</button> </div>
+        <br><br><br><br>
+        <div id="cancel_btn" class="stroop-btn"> <button type="button"  onclick="eventInput('x')" >انصراف</button> </div>
     </div>
     
     <div id="screenResults" class="screenText">
@@ -53,7 +52,14 @@
 Come back when you've done all the colors, and your results will be here.</textarea></div>
     </div>
 
+    <div class= "middle_return_btn">
+    <%= link_to 'بازگشت', @stroop.task %>
+    </div>
 
-    <%= render 'form' %>
+
+
+    <div id="hidden-form">
+        <%= render 'edit_form' %>
+    </div>
 </body>
 </html>

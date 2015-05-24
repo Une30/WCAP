@@ -1,5 +1,3 @@
-
-
     <head>
         <title>BART Task</title>
         <meta charset="utf-8" />
@@ -15,6 +13,7 @@
         <%= stylesheet_link_tag "jquery.bart.css" %> <!-- additional styles for to make the BART look fancy -->
 
         <script type="text/javascript">
+            
             $(document).ready(function() {   
             //load BART
             var s = {//txt_cashin: 'PUNKTE SAMMELN',
@@ -31,8 +30,12 @@
                       {b:0, o: { color: 'green', earnings:1}},
                       {b:0, o: { color: 'red', earnings: 1}} ];
                 $("#bart").bart( {s:s, b:b} );
+                 document.getElementById("hidden-form").style.display = "none";
         });
         </script>
+    <style type="text/css" style="display: none">
+    .main-div{background: none; background-color: #fff;}
+    </style>
     
     </head>
     <body>
@@ -41,7 +44,9 @@
         <!-- load AMP here -->
         <div id="bart" style="margin: auto; text-align: center; height:100%">
         </div>
+        <div id="hidden-form">
         <%= render :partial => '/balloons/make_balloon' , :locals =>{:bart => @bart}  %>
+        <div>
         <div id="exit">
 <br><br>
 <%=image_tag "Thanks.PNG", {:class => "thanks_image"}%>
