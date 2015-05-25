@@ -78,7 +78,7 @@ keyToColor['x'] = 'cancel';
  * @event body onload
  */
 function ini() {
-    
+    //alert("boogh");
     displayOfMessage     = document.getElementById('displayOfMessage');
     displayOfColoredWord = document.getElementById('displayOfColoredWord');
     input                = document.getElementById('input');
@@ -165,6 +165,7 @@ function iniWordArray() {
         i++; //increment to the next empty wordArray key
         
     }
+    //alert("length" + wordArray.length)
 }
 
 /**
@@ -186,6 +187,8 @@ function eventInput(input) {
             paintMessage('Press SPACE to start.');
             return true;
         }
+        if(wordArray.length == 0)
+            ini();
         document.getElementById("start_btn").style.display = 'none'
         document.getElementById("red_btn").style.display = 'block'
         document.getElementById("blue_btn").style.display = 'block'
@@ -194,6 +197,8 @@ function eventInput(input) {
         document.getElementById("cancel_btn").style.display = 'block'
         state = 'standby';
         paintMessage('Starting...');
+
+        //alert("length in if:" + wordArray.length)
         setTimeout("setStandby()",1000);
         return true;
     }
@@ -278,6 +283,7 @@ function setStandby() {
  * sets the timeStart variable.
  */
 function setWord() {
+    //alert("count :" + counter + "  length : " + wordArray.length)
     state = 'response';
     var display = wordArray[counter].display;
     var color = wordArray[counter].hex;

@@ -8,20 +8,21 @@
     <style type="text/css" style="display: none">
     .main-div{background: none; background-color: #fff;}
     </style>
-    <%= stylesheet_link_tag "stroop", media: "screen"%>
+    <%= stylesheet_link_tag "stroops", media: "screen"%>
      <script type="text/javascript">
             
-        $(document).ready(function() {   
+        $(document).ready(function() {  
+
             document.getElementById("hidden-form").style.display = "none";
+            ini();
         });
         </script>
 
     <!-- <link href="screen.css" media="screen" rel="stylesheet" type="text/css" /> -->
     <%= javascript_include_tag "classes"%>
     <%= javascript_include_tag "painter"%>
-    <%= javascript_include_tag "stroop"%>
+    <%= javascript_include_tag "script"%>
 </head>
-<body onload="ini();" id="body">
     
     <div id="clientbox">
         <h1>تست استروپ</h1>
@@ -61,5 +62,4 @@ Come back when you've done all the colors, and your results will be here.</texta
     <div id="hidden-form">
         <%= render 'edit_form' %>
     </div>
-</body>
 </html>
