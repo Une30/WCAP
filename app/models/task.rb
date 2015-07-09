@@ -5,4 +5,5 @@ class Task < ActiveRecord::Base
 	has_one :bart, :dependent => :destroy 
 	has_one :gonogo, :dependent => :destroy 
 	has_one :ddtanswer, :dependent => :destroy 
+	has_many :stroop, :dependent => :destroy 
 end

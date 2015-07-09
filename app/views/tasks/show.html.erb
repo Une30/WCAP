@@ -67,6 +67,14 @@
 </p>
 
 
+<p class="patient_text">
+  <strong>Stroop Task:</strong>
+  
+  انجام نشده است
+  <span style="float:left;"><%= link_to 'شروع آزمون', new_stroop_path%></span>
+  
+</p>
+
 
 <br><br><br><br>
 <%if current_user.admin or current_user.manager or (current_user.supervisor and current_user.supervisor.clinic = @task.clinic)%>
